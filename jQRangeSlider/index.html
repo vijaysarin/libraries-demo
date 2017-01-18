@@ -1,0 +1,58 @@
+<html>
+
+<head>
+	<title>jQRangeSlider Demo</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="libs/jQRangeSlider/css/iThing.css" type="text/css" />
+	<script type="text/javascript" src="libs/jquery.min.js"></script>
+	<script type="text/javascript" src="libs/angular.min.js"></script>
+	<script type="text/javascript" src="libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="libs/jQRangeSlider/jQAllRangeSliders-withRuler-min.js"></script>
+	<script type="text/javascript" src="libs/scroll/dragscrollable.js"></script>
+</head>
+
+<body>
+
+	<br />
+	<div ng-app="myApp">
+		<div ng-controller="MainCtrl" class="container">
+			<p style="color:white;font-size:12px;font-weight:bold;font-family:verdana;">SCROLL using Slider Background</p>
+			<div class="sliderWrapper">
+				<div class="sliderInnerWrapper" id="slider1">
+					<div jq-range-slider="{arrows:false, valueLabels:'hide', wrapperSelector:'#slider1'}" class="sliderHolder"></div>
+				</div>
+			</div>
+			<p>&nbsp;</p>
+			<p style="color:white;"><b>Start Time :</b> {{slider1Min | date : "hh:mm a"}}</p>
+			<p style="color:white;"><b>End Time :</b> {{slider1Max | date : "hh:mm a"}}</p>
+			<br/>
+			<hr/>
+			<br/>
+			<p style="color:white;font-size:12px;font-weight:bold;font-family:verdana;">* Used Solution -  SCROLL using Slider Handle and Background</p>
+			<div class="sliderWrapper noselect">
+				<div class="sliderInnerWrapper" id="slider2">
+					<div jq-range-slider="{arrows:false, valueLabels:'hide', wrapperSelector:'#slider2'}" class="sliderHolder"></div>
+				</div>
+			</div>
+			<p>&nbsp;</p>
+			<p style="color:white;"><b>Start Time :</b> {{slider2Min | date : "hh:mm a"}}</p>
+			<p style="color:white;"><b>End Time :</b> {{slider2Max | date : "hh:mm a"}}</p>
+			<br/>
+			<hr/>
+			<br/>
+			<p style="color:white;font-size:12px;font-weight:bold;font-family:verdana;">Calculated Scrolling</p>
+			<div class="sliderWrapper">
+				<div class="sliderInnerWrapper" id="slider3">
+					<div jq-range-slider="{arrows:false, valueLabels:'hide', wrapperSelector:'#slider3'}" class="sliderHolder"></div>
+				</div>
+			</div>
+			<p>&nbsp;</p>
+			<p style="color:white;"><b>Start Time :</b> {{slider3Min | date : "hh:mm a"}}</p>
+			<p style="color:white;"><b>End Time :</b> {{slider3Max | date : "hh:mm a"}}</p>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
